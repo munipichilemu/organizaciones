@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Laragear\Rut\Rut;
-use Laragear\Rut\RutFormat;
 
 class OrganizationsSeeder extends Seeder
 {
@@ -19,7 +18,7 @@ class OrganizationsSeeder extends Seeder
     public function run(): void
     {
         // Ruta al archivo CSV
-        $csvFile = storage_path('app/imports/orgs.csv');
+        $csvFile = storage_path('app/imports/organizations.csv');
 
         // Leer el archivo CSV
         $csvData = File::get($csvFile);
@@ -37,12 +36,6 @@ class OrganizationsSeeder extends Seeder
             $data = str_getcsv($row);
             $rowData = array_combine($header, $data);
 
-            // Formatear RUT usando laragear/rut
-            /*$rut = null;
-            if (! empty($rowData['rut_num']) && ! empty($rowData['rut_vd'])) {
-                $rut = Rut::parse($rowData['rut_num'].$rowData['rut_vd'])->format(RutFormat::Strict);
-            }*/
-
             // Determinar category_id (usar 24 si está vacío)
             $categoryId = empty($rowData['category_id']) ? 24 : $rowData['category_id'];
 
@@ -59,7 +52,6 @@ class OrganizationsSeeder extends Seeder
                 'id' => (string) Str::ulid(),
                 'registration_id' => $rowData['registration_id'],
                 'name' => $rowData['name'],
-                /* 'rut' => $rut, */
                 'rut_num' => empty($rowData['rut_num']) ? null : $rowData['rut_num'],
                 'rut_vd' => empty($rowData['rut_vd']) ? null : $rowData['rut_vd'],
                 'information_source' => $rowData['information_source'],
