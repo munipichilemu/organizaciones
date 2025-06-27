@@ -22,22 +22,21 @@ return new class extends Migration
 
         DB::table('member_positions')->insert([
             ['slug' => 'president', 'title' => 'Presidente', 'order' => '10'],
-            ['slug' => 'vicepresident', 'title' => 'Vicepresidente', 'order' => '20'],
-            ['slug' => 'secretary', 'title' => 'Secretario', 'order' => '30'],
-            ['slug' => 'treasurer', 'title' => 'Tesorero', 'order' => '40'],
-            ['slug' => 'director', 'title' => 'Director', 'order' => '50'],
             ['slug' => 'superintendent', 'title' => 'Superintendente', 'order' => '11'],
+
+            ['slug' => 'vicepresident', 'title' => 'Vicepresidente', 'order' => '20'],
             ['slug' => 'first_commander', 'title' => '1º Comandante', 'order' => '21'],
+
+            ['slug' => 'secretary', 'title' => 'Secretario', 'order' => '30'],
+
+            ['slug' => 'treasurer', 'title' => 'Tesorero', 'order' => '40'],
+            ['slug' => 'assistant_treasurer', 'title' => 'Protesorero', 'order' => '41'],
+
+            ['slug' => 'director', 'title' => 'Director', 'order' => '50'],
+            ['slug' => 'delegate', 'title' => 'Delegado', 'order' => '51'],
+
             ['slug' => 'member', 'title' => 'Miembro', 'order' => '90'],
             ['slug' => 'other', 'title' => 'Otro cargo o posición', 'order' => '99'],
         ]);
-    }
-
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
-    {
-        Schema::dropIfExists('member_positions');
     }
 };
