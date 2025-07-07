@@ -3,7 +3,7 @@
   <component name="LaravelPint">
     <laravel_pint_settings>
       <LaravelPintConfiguration tool_path="$PROJECT_DIR$/vendor/bin/pint" />
-      <laravel_pint_by_interpreter asDefaultInterpreter="true" interpreter_id="0e9a2c2d-77f9-466e-8591-38516a204b9f" tool_path="$PROJECT_DIR$/vendor/bin/pint">
+      <laravel_pint_by_interpreter interpreter_id="0e9a2c2d-77f9-466e-8591-38516a204b9f" tool_path="$PROJECT_DIR$/vendor/bin/pint">
         <option name="timeout" value="30000" />
       </laravel_pint_by_interpreter>
     </laravel_pint_settings>
@@ -20,8 +20,11 @@
   </component>
   <component name="PhpCodeSniffer">
     <phpcs_settings>
-      <phpcs_by_interpreter asDefaultInterpreter="true" interpreter_id="0e9a2c2d-77f9-466e-8591-38516a204b9f" timeout="30000" />
+      <phpcs_by_interpreter interpreter_id="0e9a2c2d-77f9-466e-8591-38516a204b9f" timeout="30000" />
     </phpcs_settings>
+  </component>
+  <component name="PhpExternalFormatter">
+    <option name="externalFormatter" value="LARAVEL_PINT" />
   </component>
   <component name="PhpIncludePathManager">
     <include_path>
@@ -189,7 +192,7 @@
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
   <component name="PhpStan">
     <PhpStan_settings>
-      <phpstan_by_interpreter asDefaultInterpreter="true" interpreter_id="0e9a2c2d-77f9-466e-8591-38516a204b9f" timeout="60000" />
+      <phpstan_by_interpreter interpreter_id="0e9a2c2d-77f9-466e-8591-38516a204b9f" timeout="60000" />
     </PhpStan_settings>
   </component>
   <component name="PhpStanOptionsConfiguration">
@@ -202,7 +205,7 @@
   </component>
   <component name="Psalm">
     <Psalm_settings>
-      <psalm_fixer_by_interpreter asDefaultInterpreter="true" interpreter_id="0e9a2c2d-77f9-466e-8591-38516a204b9f" timeout="60000" />
+      <psalm_fixer_by_interpreter interpreter_id="0e9a2c2d-77f9-466e-8591-38516a204b9f" timeout="60000" />
     </Psalm_settings>
   </component>
   <component name="PsalmOptionsConfiguration">
